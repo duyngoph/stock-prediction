@@ -1,0 +1,22 @@
+Sure, here's the contents for the file: /stock-prediction/stock-prediction/config.yaml
+
+model:
+  type: ensemble
+  arima:
+    order: [1, 1, 1]
+    seasonal_order: [1, 1, 1, 12]
+  sentiment:
+    model_name: "llm-sentiment-model"
+    threshold: 0.5
+
+data:
+  raw_data_path: "data/raw/sp500.csv"
+  processed_data_path: "data/processed/sentiment_data.csv"
+
+api:
+  host: "0.0.0.0"
+  port: 5000
+
+logging:
+  level: "INFO"
+  file: "logs/app.log"
